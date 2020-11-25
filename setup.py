@@ -10,7 +10,7 @@ def codons(seq):
     return [seq[i:i+3] for i in range(0, len(seq), 3)]
 
 def info(codon):
-   return ('','','','') if codon not in table else table[codon]
+    return ('','','','') if codon not in table else table[codon]
 
 def infoList(codon_list, i=None):
     if i:
@@ -18,7 +18,7 @@ def infoList(codon_list, i=None):
     else:
         return [info(c) for c in codon_list]
 
-with open('origin.txt') as f:
+with open('covid_bases.txt') as f:
     lines = [line.rstrip() for line in f]
 
 covid = "".join(lines)
